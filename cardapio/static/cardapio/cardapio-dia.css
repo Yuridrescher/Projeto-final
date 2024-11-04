@@ -18,7 +18,6 @@ main section {
 }
 
 .imagem{
-    background-image: url("https://images7.alphacoders.com/596/596343.jpg");
     background-position: center;
     background-size: cover;
 }
