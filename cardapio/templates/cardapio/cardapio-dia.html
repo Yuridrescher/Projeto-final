@@ -11,19 +11,25 @@
 
 <body>
 
-
-    <img src="{{imagem}}" alt="" width="500px">
-
     <main>
-        <div class="segunda">
+
+        <section class="segunda">
+            <img src="{% static 'cardapio/assets/logo.jpeg'%}" alt="logo" class="logo">
             <h2>{{semana}}</h2>
             <h3>{{titulo}}</h3>
 
             <p>Lanche</p>
-            <p>{{descricao}}</p>
+            <p>Descrição: {{descricao}}</p>
+            
 
-        </div>
-        <a class="voltar-menu" href="/">Voltar ao Menu</a>
+            <div class="botao-semana">
+                <a href="/" class="link-botao">voltar</a>
+            </div>
+
+        </section>
+        <section class="imagem">
+
+        </section>
     </main>
 </body>
 
