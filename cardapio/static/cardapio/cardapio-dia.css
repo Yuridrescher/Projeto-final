@@ -1,62 +1,90 @@
-/* Estilização do Body */
-
-/* Estilização da Imagem de Fundo */
-img {
-    position: absolute; /* Permite que a imagem fique em segundo plano */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.3; /* Transparência da imagem */
-    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    background-color: black;
 }
 
-/* Estilização do Header */
-header {
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* Estilização do Main */
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; /* Centraliza o texto */
-    z-index: 1; /* Garante que o texto fique acima da imagem */
+    flex-direction: row;
+    flex: 1;
 }
 
-/* Estilização do Footer */
-footer {
+main section {
+    flex: 1;
+
+}
+
+.imagem{
+    background-image: url("https://images7.alphacoders.com/596/596343.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    height:200px ;
+    width: 200px;
+    margin-top:0;
+}
+
+.segunda{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    background-color:white;
 }
 
-/* Estilização dos Botões */
-.botao-semana {
+.voltar{
     background-color: #007BFF; /* Cor azul */
     color: white; /* Texto branco */
     padding: 10px;
     margin: 15px;
-    width: 150px; /* Largura aumentada */
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px; /* Bordas arredondadas */
     transition: background-color 0.3s; /* Transição suave */
-    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Cursor pointer */
+    text-decoration: none;
+    text-align: center;
+    color: white; /* Texto branco para os links */
 }
 
-.botao-semana:hover {
+.voltar:hover {
     background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .botao-semana {
-        width: 80%; /* Botões mais largos em telas menores */
-        margin: 10px 0; /* Margens ajustadas */
+.botao-semana {
+    background-color: #007BFF; /* Cor azul */
+    color: white; /* Texto branco */
+    padding: 10px;
+    margin: 15px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+    cursor: pointer; /* Cursor pointer */
+}
+
+.link-botao {
+    text-decoration: none;
+    text-align: center;
+    color: white; /* Texto branco para os links */
+}
+
+@media (max-width:600px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1;
+    }
+    .imagem {
+        height: 30vh;
     }
 }
