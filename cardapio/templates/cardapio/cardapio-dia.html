@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda-feira</title>
+    <link rel="stylesheet" href="{% static 'cardapio/cardapio-dia.css'%}">
+</head>
+
+<body>
+
+
+    <img src="{{imagem}}" alt="" width="500px">
+
+    <main>
+        <div class="segunda">
+            <h2>{{semana}}</h2>
+            <h3>{{titulo}}</h3>
+
+            <p>Lanche</p>
+            <p>{{descricao}}</p>
+
+        </div>
+        <a class="voltar-menu" href="/">Voltar ao Menu</a>
+    </main>
+</body>
+
+</html>

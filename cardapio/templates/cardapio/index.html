@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu da Semana</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{% static 'cardapio/style.css' %}">
 </head>
 
 <body>
     <header>
 
-        <img src="./assets/logo.jpeg" alt="logo" class="logo">
+        <img src="{% static 'cardapio/assets/logo.jpeg' %}" alt="logo" class="logo">
         <div class="logo-wr">
             <h1>Escola Professor Willy Roos</h1>
             <h2>Cardápio Escolar</h2>
@@ -26,19 +27,19 @@
     <main>
         <h2>Selecione um Dia:</h2>
         <div class="botao-semana">
-            <a href="./semanas/segunda.html" class="link-botao">Segunda-feira</a>
+            <a href="2" class="link-botao">Segunda-feira</a>
         </div>
         <div class="botao-semana">
-            <a href="./semanas/terca.html" class="link-botao">Terça-feira</a>
+            <a href="3" class="link-botao">Terça-feira</a>
         </div>
         <div class="botao-semana">
-            <a href="./semanas/quarta.html" class="link-botao">Quarta-feira</a>
+            <a href="4" class="link-botao">Quarta-feira</a>
         </div>
         <div class="botao-semana">
-            <a href="./semanas/quinta.html" class="link-botao">Quinta-feira</a>
+            <a href="5" class="link-botao">Quinta-feira</a>
         </div>
         <div class="botao-semana">
-            <a href="./semanas/sexta.html" class="link-botao">Sexta-feira</a>
+            <a href="6" class="link-botao">Sexta-feira</a>
         </div>
     </main>
     <footer>
