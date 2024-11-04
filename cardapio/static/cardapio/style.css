@@ -1,33 +1,47 @@
-/* Estilização do Header */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    background-color: black;
+}
+
+
 header {
     display: flex;
-    flex-direction: center;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    height: 100px;
+    background-color: white;
+    padding: 15px;
+    gap: 2px;
 }
 
-/* Estilização do Main */
+.logo {
+    height: 100%;
+}
+
+.logo-wr {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+h1, h2 {
+    margin: 0;
+}
+
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: space-evenly;
+    background-color: white;
 }
 
-/* Estilização do Footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
 
-/* Estilização dos Botões */
 .botao-semana {
     background-color: #007BFF; /* Cor azul */
     color: white; /* Texto branco */
@@ -46,7 +60,6 @@ footer {
     background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
 
-/* Estilização dos Links dentro do Botão */
 .link-botao {
     text-decoration: none;
     text-align: center;
@@ -60,16 +73,14 @@ footer {
     align-items: center;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .botao-semana {
-        width: 80%; /* Botões mais largos em telas menores */
-        margin: 10px 0; /* Margens ajustadas */
-    }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
-    width: 100px;
-    height: 100px;
-}
 
