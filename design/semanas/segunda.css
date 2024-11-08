@@ -1,21 +1,31 @@
+/* Resetando margens e padding para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilização do Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
 /* Estilização da Imagem de Fundo */
-img {
-    position: absolute; /* Permite que a imagem fique em segundo plano */
+.background-image {
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.3; /* Transparência da imagem */
-    z-index: -1; /* Coloca a imagem atrás de outros elementos */
-}
-
-/* Estilização do Header */
-header {
-    text-align: center;
-    margin: 20px 0;
+    opacity: 0.6;
+    z-index: -1;
 }
 
 /* Estilização do Main */
@@ -23,40 +33,141 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Centraliza o texto */
-    z-index: 1; /* Garante que o texto fique acima da imagem */
+    justify-content: flex-start;
+    text-align: center;
+    padding: 30px;
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    min-height: 400px;
 }
 
-/* Estilização do Footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Estilização do Header (h2 e h3) */
+h2, h3 {
+    color: #2c3e50; /* Cor escura para os títulos */
+    font-weight: 800; /* Peso da fonte mais forte para maior destaque */
+    letter-spacing: 1.5px; /* Maior espaçamento entre letras */
+    margin-bottom: 20px; /* Espaçamento entre os títulos e o conteúdo */
+    text-transform: uppercase; /* Transformação para caixa alta */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar destaque */
+    font-family: 'Georgia', serif; /* Fonte serifada para um toque mais elegante */
+    transition: all 0.3s ease-in-out; /* Transição suave para efeitos de hover */
 }
 
-/* Estilização dos Botões */
-.botao-semana {
-    background-color: #007BFF; /* Cor azul */
-    color: white; /* Texto branco */
-    padding: 10px;
-    margin: 15px;
-    width: 150px; /* Largura aumentada */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave */
-    text-decoration: none; /* Remove underline */
+/* Efeito ao passar o mouse (hover) sobre os títulos */
+h2:hover, h3:hover {
+    color: #3498db; /* Mudança de cor ao passar o mouse */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+    transform: translateY(-5px); /* Levanta o título ao passar o mouse */
 }
 
-.botao-semana:hover {
-    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+/* Estilização do Texto */
+p {
+    color: #555;
+    font-size: 1.15em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 800px;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .botao-semana {
-        width: 80%; /* Botões mais largos em telas menores */
-        margin: 10px 0; /* Margens ajustadas */
+/* Estilização do Link "Voltar ao Menu" */
+.voltar-menu {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+/* Efeito de hover no botão */
+.voltar-menu:hover {
+    background-color: #2980b9;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+/* Estilização específica para a palavra "Lanche" */
+.lanche {
+    font-size: 1.5em; /* Tamanho maior para chamar a atenção */
+    color: hwb(259 4% 15%); /* Cor vibrante (vermelho) */
+    font-weight: bold; /* Negrito para maior ênfase */
+    letter-spacing: 1px; /* Espaçamento de letras para destacar */
+    text-transform: uppercase; /* Caixa alta */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilização da Descrição */
+.descricao {
+    font-size: 1.1em; /* Tamanho de fonte um pouco maior */
+    color: #7f8c8d; /* Cor suave (cinza) */
+    line-height: 1.7; /* Melhor espaçamento entre as linhas */
+    font-style: italic; /* Itálico para a descrição */
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+/* Estilo de hover (opcional) para o "Lanche" */
+.lanche:hover {
+    color: #c0392b; /* Alteração de cor no hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+    transform: translateY(-2px); /* Levanta o texto ao passar o mouse */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de foco no botão */
+.voltar-menu:focus {
+    outline: none;
+    border: 2px solid #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+/* Estilização de Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 25px;
+        margin: 20px;
     }
+
+    .voltar-menu {
+        width: 100%;
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2, h3 {
+        font-size: 1.6em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .voltar-menu {
+        padding: 12px 18px;
+        font-size: 0.95em;
+    }
+}
+.Cozinheira{
+    width: 160px;
+    height: 160px;
+
+
+
 }
