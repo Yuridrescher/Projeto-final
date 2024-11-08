@@ -1,0 +1,74 @@
+/* Estilização do Header */
+header {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização do Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilização do Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos Botões */
+.botao-semana {
+    background-color: #007BFF; /* Cor azul */
+    color: white; /* Texto branco */
+    padding: 10px;
+    margin: 15px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+    cursor: pointer; /* Cursor pointer */
+}
+
+.botao-semana:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilização dos Links dentro do Botão */
+.link-botao {
+    text-decoration: none;
+    text-align: center;
+    color: white; /* Texto branco para os links */
+}
+
+/* Estilização da seção de segunda-feira */
+.segunda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .botao-semana {
+        width: 80%; /* Botões mais largos em telas menores */
+        margin: 10px 0; /* Margens ajustadas */
+    }
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}

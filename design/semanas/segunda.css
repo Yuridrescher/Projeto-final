@@ -1,0 +1,62 @@
+/* Estilização do Body */
+
+/* Estilização da Imagem de Fundo */
+img {
+    position: absolute; /* Permite que a imagem fique em segundo plano */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* Transparência da imagem */
+    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+}
+
+/* Estilização do Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilização do Main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+    z-index: 1; /* Garante que o texto fique acima da imagem */
+}
+
+/* Estilização do Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização dos Botões */
+.botao-semana {
+    background-color: #007BFF; /* Cor azul */
+    color: white; /* Texto branco */
+    padding: 10px;
+    margin: 15px;
+    width: 150px; /* Largura aumentada */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+    text-decoration: none; /* Remove underline */
+}
+
+.botao-semana:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .botao-semana {
+        width: 80%; /* Botões mais largos em telas menores */
+        margin: 10px 0; /* Margens ajustadas */
+    }
+}
