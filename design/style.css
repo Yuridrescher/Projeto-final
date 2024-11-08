@@ -1,12 +1,58 @@
 /* Estilização do Header */
 header {
     display: flex;
-    flex-direction: center;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8; /* Cor de fundo mais suave */
+    padding: 20px 40px; /* Mais padding para dar espaço */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    border-bottom: 1px solid #e0e0e0;
+    font-family: 'Roboto', sans-serif; /* Fonte mais moderna */
+    position: relative;
+}
+
+/* Logo no Header */
+.logo {
+    width: 130px;
+    height: auto;
+    transition: transform 0.3s ease;
+    position: absolute;
+    left: 20px;
+}
+
+/* Efeito de hover no logo */
+header .logo:hover {
+    transform: scale(1.1); /* Efeito de zoom mais suave */
+}
+
+/* Parte dos Dias no Header (Agora com fundo borrado) */
+.header-dias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente mais suave */
+    padding: 12px 25px;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    font-weight: 600;
+}
+
+/* Links no Header */
+header .link-header {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    margin: 0 15px;
+    font-size: 16px; /* Fonte ajustada */
+}
+
+header .link-header:hover {
+    color: #2306c6; /* Azul mais vibrante */
 }
 
 /* Estilização do Main */
@@ -14,7 +60,29 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 50px 30px;
+    background-color: #f4f4f4;
+    min-height: 60vh;
+    font-family: 'Open Sans', sans-serif; /* Fonte secundária para melhor legibilidade */
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif; /* Uso da fonte principal para títulos */
+    color: #333;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
 }
 
 /* Estilização do Footer */
@@ -22,53 +90,80 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px 60px;
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #e0e0e0;
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Estilização dos Botões */
 .botao-semana {
-    background-color: #007BFF; /* Cor azul */
-    color: white; /* Texto branco */
-    padding: 10px;
-    margin: 15px;
-    width: 100px;
+    background-color: #2904d0;
+    color: white;
+    padding: 14px 25px;
+    margin: 20px 10px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave */
-    cursor: pointer; /* Cursor pointer */
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px; /* Tamanho do texto ajustado */
 }
 
 .botao-semana:hover {
-    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    background-color: #040fed;
+    transform: translateY(-5px);
 }
 
-/* Estilização dos Links dentro do Botão */
+.botao-semana:active {
+    transform: translateY(2px);
+}
+
+.botao-semana:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+/* Links dentro dos botões */
 .link-botao {
     text-decoration: none;
+    color: white;
+    font-size: 14px;
     text-align: center;
-    color: white; /* Texto branco para os links */
-}
-
-/* Estilização da seção de segunda-feira */
-.segunda {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
+    header {
+        padding: 15px; /* Menos padding em telas pequenas */
+    }
+    
     .botao-semana {
-        width: 80%; /* Botões mais largos em telas menores */
-        margin: 10px 0; /* Margens ajustadas */
+        width: 85%;
+        margin: 15px auto;
+        font-size: 18px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    main {
+        padding: 25px 15px;
     }
 }
 
-.logo{
-    width: 100px;
-    height: 100px;
+/* Container para o logo e os links */
+.logo-wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
 }
