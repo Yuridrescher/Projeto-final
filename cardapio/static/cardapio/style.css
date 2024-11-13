@@ -3,15 +3,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8; /* Cor de fundo mais suave */
-    padding: 20px 40px; /* Mais padding para dar espaço */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    background-color: #f8f8f8;
+    padding: 20px 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #e0e0e0;
-    font-family: 'Poppins', sans-serif; /* Fonte alterada para Poppins */
+    font-family: 'Poppins', sans-serif;
     position: relative;
 }
 
-/* Logo no Header */
 .logo {
     width: 130px;
     height: auto;
@@ -21,39 +20,43 @@ header {
     border-radius: 30%;
 }
 
-/* Efeito de hover no logo */
 header .logo:hover {
-    transform: scale(1.1); /* Efeito de zoom mais suave */
+    transform: scale(1.1);
 }
 
-/* Parte dos Dias no Header (Agora com fundo borrado) */
+.logo-wr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
 .header-dias {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente mais suave */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 12px 25px;
-    border-radius: 12px; /* Bordas mais arredondadas */
+    border-radius: 12px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    transition: background-color 0.3s ease;
     margin-top: 12px;
-    font-size: 16px; /* Tamanho da fonte ajustado */
+    font-size: 16px;
     font-weight: 600;
 }
 
-/* Links no Header */
 header .link-header {
     text-decoration: none;
     color: #333;
     font-weight: 600;
     transition: color 0.3s ease;
     margin: 0 15px;
-    font-size: 16px; /* Fonte ajustada */
+    font-size: 16px;
 }
 
 header .link-header:hover {
-    color: #2306c6; /* Azul mais vibrante */
+    color: #2306c6;
 }
 
 /* Estilização do Main */
@@ -62,10 +65,9 @@ main {
     flex-direction: row;
     justify-content: space-around;
     background-color: #f4f4f4;
-    
 }
 
-.dias{
+.dias {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,11 +75,12 @@ main {
     background-color: #f4f4f4;
     min-height: 60vh;
     font-family: 'Open Sans', sans-serif;
-
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif; /* Uso da fonte principal para títulos */
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
@@ -95,19 +98,6 @@ h3 {
     font-size: 20px;
 }
 
-/* Estilização do Footer */
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 30px 60px;
-    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
-    border-top: 2px solid #e0e0e0;
-    margin-top: 50px;
-    font-family: 'Lora', serif; /* Fonte alterada para Lora */
-}
-
 /* Estilização dos Botões */
 .botao-semana {
     background-color: #2904d0;
@@ -123,7 +113,7 @@ footer {
     cursor: pointer;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 16px; /* Tamanho do texto ajustado */
+    font-size: 16px;
 }
 
 .botao-semana:hover {
@@ -140,7 +130,6 @@ footer {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5);
 }
 
-/* Links dentro dos botões */
 .link-botao {
     text-decoration: none;
     color: white;
@@ -148,52 +137,46 @@ footer {
     text-align: center;
 }
 
-/* Responsividade */
-
-/* Container para o logo e os links */
-.logo-wr {
+/* Estilização do Footer */
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    align-self: center;
+    background-color: #ffffff;
+    padding: 30px 60px;
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.1);
+    border-top: 2px solid #e0e0e0;
+    margin-top: 50px;
+    font-family: 'Lora', serif;
 }
 
-.logo-cozinheiro{
-    width: 130px;
-    height: auto;
-}
-
-.logo-prato{
-    width: 130px;
-    height: auto;
-}
+/* Estilização do Logo e dos Backgrounds */
 .logo-telas {
     flex: 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
+
 @media (max-width: 600px) {
     header {
-        padding: 15px; /* Menos padding em telas pequenas */
+        padding: 15px;
     }
-    
+
     .botao-semana {
         width: 85%;
         margin: 15px auto;
         font-size: 18px;
     }
-    
+
     .logo {
         width: 100px;
     }
-    
+
     main {
         padding: 25px 15px;
     }
-    
+
     .logo-telas {
         background-image: none;
     }

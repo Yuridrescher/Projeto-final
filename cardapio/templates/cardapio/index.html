@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="{% static 'cardapio/style.css' %}">
     <style>
         .teste {
-            background-image: url('{% static "cardapio/assets/logo-cozi.png" %}');
+            background-image: url("{% static 'cardapio/assets/logo-cozi.png' %}");
         }
 
         .teste2 {
-            background-image: url('{% static "cardapio/assets/logo-garfo.webp" %}');
+            background-image: url("{% static 'cardapio/assets/logo-garfo.webp' %}");
         }
     </style>
 </head>
@@ -26,29 +26,20 @@
             <h2>Cardápio Escolar</h2>
         </div>
     </header>
+
     <main>
         <div class="logo-telas teste"></div>
-
-        <section class="dias" style="flex: 1">
+        <section class="dias">
             <h2>Selecione um Dia:</h2>
-            <div class="botao-semana">
-                <a href="segunda-feira/" class="link-botao">Segunda-feira</a>
-            </div>
-            <div class="botao-semana">
-                <a href="terca-feira/" class="link-botao">Terça-feira</a>
-            </div>
-            <div class="botao-semana">
-                <a href="quarta-feira/" class="link-botao">Quarta-feira</a>
-            </div>
-            <div class="botao-semana">
-                <a href="quinta-feira/" class="link-botao">Quinta-feira</a>
-            </div>
-            <div class="botao-semana">
-                <a href="sexta-feira/" class="link-botao">Sexta-feira</a>
-            </div>
+            <div class="botao-semana"><a href="segunda-feira/" class="link-botao">Segunda-feira</a></div>
+            <div class="botao-semana"><a href="terca-feira/" class="link-botao">Terça-feira</a></div>
+            <div class="botao-semana"><a href="quarta-feira/" class="link-botao">Quarta-feira</a></div>
+            <div class="botao-semana"><a href="quinta-feira/" class="link-botao">Quinta-feira</a></div>
+            <div class="botao-semana"><a href="sexta-feira/" class="link-botao">Sexta-feira</a></div>
         </section>
         <div class="logo-telas teste2"></div>
     </main>
+
     <footer>
         <p>2024 Escola Professor Willy Roos.</p>
         <p>By 302-WR</p>
